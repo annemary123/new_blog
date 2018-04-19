@@ -1,0 +1,16 @@
+<h1> Blogs...</h1>
+{% if blogs %}
+<ul>
+{% for blog in blogs %}
+<li>
+<u>TITLE : {{ blog.title }}</u><br>
+AUTHOR : {{blog.author}}<br><br>
+{{ blog.blog }}<br><br></li><br>
+<a href="like.html">Like</a><br>
+<a href="comment.html">Comment</a>
+{% endfor %}
+</ul>
+{% else %}
+<p>There are no posts yet.</p>
+
+{% endif %}

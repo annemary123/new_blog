@@ -1,0 +1,16 @@
+<h1>My Blogs</h1>
+{% if blogs %}
+<ul>
+{% for blog in blogs %}
+<li>
+    <u><div style="background-color:yellow">TITLE : {{ blog.bname }}</div></u><br>
+<a href="blogid={{blog.id}}">Edit Post</a>
+<br><br>
+{{ blog.blog }}</li><br>
+{% endfor %}
+</ul>
+{% else %}
+<p>You haven't posted anything yet.</p>
+<p>Start your blogs Now.</p>
+{% endif %}
+
